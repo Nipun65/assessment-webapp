@@ -2,6 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-behavior: smooth;
+}
+
+.cardshadow {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
 .playfairfont {
   font-family: "Playfair Display", serif;
+}
+
+.cormorantfont {
+  font-family: "Cormorant", serif;
+}
+
+.robotofont {
+  font-family: "Roboto", sans-serif;
+}
+
+.borderbtn {
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.5s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.5s ease-out;
+}
+
+.scrolling {
+  margin: 0;
+}
+
+.scrolling span {
+  color: #f2f2f233;
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-image: linear-gradient(90deg, #f2f2f2, #f2f2f2);
+  animation: reveal-text linear forwards;
+  animation-timeline: view();
+}
+
+.scrolling p span {
+  animation-range-start: cover 20vh;
+  animation-range-end: cover 30vh;
+}
+
+.scrolling div span {
+  animation-range-start: cover 23vh;
+  animation-range-end: cover 50vh;
+}
+
+@keyframes reveal-text {
+  to {
+    background-size: 100% 100%;
+  }
 }

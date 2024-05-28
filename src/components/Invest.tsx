@@ -5,8 +5,6 @@ import Card from "./Card";
 import HowToInvest from "./HowToInvest";
 
 const Invest = () => {
-  const firstColumn = CARDDETAILS?.slice(0, 2);
-  const secondColumn = CARDDETAILS?.slice(2);
   return (
     <div className="min-h-screen relative items-center flex-col flex bg-white">
       <img src={tree} className="absolute -top-12 z-10" />
@@ -22,12 +20,12 @@ const Invest = () => {
       </div>
       <div className="flex gap-3 m-16">
         <div className="flex flex-col gap-3">
-          {CARDDETAILS.slice(0, 2).map((card: any, index) => {
+          {CARDDETAILS.slice(0, 2).map((card, index) => {
             return <Card details={card} key={index} />;
           })}
         </div>
         <div className="flex flex-col gap-3 mt-10">
-          {CARDDETAILS.slice(2).map((card: any, index) => {
+          {CARDDETAILS.slice(2).map((card, index) => {
             return <Card details={card} key={index} />;
           })}
         </div>

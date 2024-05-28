@@ -15,14 +15,17 @@ const HEADERTABS = [
   {
     name: "Opportunities",
     img: opportunity,
+    id: 1,
   },
   {
     name: "How it Works",
     img: howitworks,
+    id: 2,
   },
   {
     name: "About Us",
     img: about,
+    id: 3,
   },
 ];
 
@@ -60,15 +63,15 @@ const HOWTOINVEST = [
     description:
       "Investing in private markets facilitates portfolio diversification, mitigating risks associated with public markets",
     img: createaccount,
-    show: false,
+    show: true,
     id: 1,
   },
   {
     question: "Discover Opportunities",
     description:
       "Investing in private markets facilitates portfolio diversification, mitigating risks associated with public markets",
-    img: discoveropportunity,
     show: false,
+    img: discoveropportunity,
     id: 2,
   },
   {

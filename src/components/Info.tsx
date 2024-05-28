@@ -15,34 +15,34 @@ const Info = () => {
             <div className="p-6 size-52 -right-12 -top-24 absolute border border-white rounded-full" />
           </div>
         </div>
-        <div className="flex flex-col gap-4 w-[50%]">
+        <div className="flex flex-col gap-6 w-[50%] robotofont">
           <p className="text-[#F2F2F2] text-4xl text-wrap">
             Pave your way to Alpha Gains and make the most of your investments.
           </p>
           <p className="text-[#F2F2F266] text-xl">Start your journey now.</p>
           <Button
-            className="text-[#FFFFFFBF] border border-[#FFFFFF] w-fit"
+            className="text-[#FFFFFFBF] border border-[#FFFFFF] w-fit borderbtn hover:bg-[#4375FB] transition-all duration-500 ease-in-out"
             handleButton={() => {}}
           >
             Create an Account
           </Button>
         </div>
       </div>
-      <div className="h-screen text-white flex gap-12 items-center justify-center">
-        <div className="w-[50%]">
-          <img src={chart} alt="chart" className="" />
+      <div className="h-screen text-white flex gap-16 items-center justify-center">
+        <div className="w-[50%] flex justify-end">
+          <img src={chart} alt="chart" style={{ height: "400px" }} />
         </div>
         <div className="text-xl w-[50%] playfairfont">
           <div className="text-5xl">Access</div>
           <div className="ml-8 text-5xl italic">Alternative</div>
           <div className="ml-16 text-5xl">Investments</div>
-          <div className="text-sm mt-12">
-            <p>
+          <div className="text-md mt-12 w-[70%]">
+            <p className="cormorantfont">
               Unleashing the untapped potential of the alternative markets
               through Rooba.Finance - Your gateway to superior returns and
               exclusive opportunities
             </p>
-            <p>
+            <p className="cormorantfont">
               Discover the advantages of alternative market investments, unlock
               new horizons, and embark on a journey towards financial prosperity
               with our platform as your trusted partner.
@@ -50,28 +50,37 @@ const Info = () => {
           </div>
         </div>
       </div>
-      <div className="justify-center flex  items-center text-white h-screen">
+      <div className="justify-center flex items-center text-white h-screen aboutus">
         <div className="w-[80%] flex-col flex">
           <img src={blueicon} alt="icon" style={{ height: "350px" }} />
-          <p className="text-4xl text-[#F2F2F2]">
-            Empower your financing strategies with tomorrow’s revolutionary
-            technology. Our user-friendly platform will give your investors the
-            power to unlock de-fi capabilities hence boosting the liquidity of
-            your fund by large margins.
-          </p>
-          <p className="text-[#F2F2F280] mt-10">
-            How would you want to start creating your financial instrument?
-          </p>
+          <div className="scrolling">
+            <p className="text-4xl text-[#F2F2F2] mt-12">
+              <span>
+                Empower your financing strategies with tomorrow’s revolutionary
+                technology. Our user-friendly platform will give your investors
+                the power to unlock de-fi capabilities hence boosting the
+                liquidity of your fund by large margins.
+              </span>
+            </p>
+            <div className="text-[#F2F2F280] mt-10">
+              <span className="inline-flex">
+                How would you want to start&nbsp;
+                <div className="underline">
+                  creating your financial instrument?
+                </div>
+              </span>
+            </div>
+          </div>
 
-          <div className="flex gap-4 mt-4">
+          <div className="flex gap-4 my-4">
             <Button
-              className="bg-[#4375FB] text-white text-sm h-fit py-2 px-8"
+              className="bg-[#4375FB] text-white text-sm h-fit py-2 px-8 hover:opacity-75"
               handleButton={() => {}}
             >
               Talk to Us
             </Button>
             <Button
-              className="border border-white text-white text-sm h-fit py-2 px-8"
+              className="border border-white text-white text-sm h-fit py-2 px-8 hover:opacity-75"
               handleButton={() => {}}
             >
               Book a Demo
