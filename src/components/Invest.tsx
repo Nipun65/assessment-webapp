@@ -18,7 +18,7 @@ const Invest = () => {
           making for a steady investment strategy.{" "}
         </p>
       </div>
-      <div className="flex gap-3 m-16">
+      <div className="flex gap-3 m-16 md:flex-row xs:flex-col">
         <div className="flex flex-col gap-3">
           {CARDDETAILS.slice(0, 2).map((card, index) => {
             return <Card details={card} key={index} />;

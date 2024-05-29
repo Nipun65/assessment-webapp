@@ -1,13 +1,33 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import { twMerge } from "tailwind-merge";
 
-const Button = ({ children, className, handleButton, setHover }: any) => {
+interface ButtonProps {
+  children: React.ReactNode;
+  className: string;
+  handleButton: () => void;
+  setHover?: Dispatch<SetStateAction<boolean>>;
+}
+
+const Button: React.FC<ButtonProps> = ({
+  children,
+  className,
+  handleButton,
+  setHover,
+}) => {
   return (
     <button
       className={twMerge("px-6 py-4", className)}
       onClick={handleButton}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
+      onMouseEnter={() => {
+        if (setHover) {
+          setHover(true);
+        }
+      }}
+      onMouseLeave={() => {
+        if (setHover) {
+          setHover(false);
+        }
+      }}
     >
       {children}
     </button>

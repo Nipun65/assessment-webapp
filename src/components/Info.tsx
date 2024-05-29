@@ -6,17 +6,17 @@ import blueicon from "./../assets/bluelogo.svg";
 const Info = () => {
   return (
     <div className="p-10 flex-col bg-[#101010] z-50 relative">
-      <div className="flex gap-16 text-white items-center justify-center h-[90vh]">
-        <div className="w-[50%]">
+      <div className="flex xs:flex-col md:flex-row gap-16 text-white items-center justify-center h-[90vh]">
+        <div className="xs:w-full md:w-[50%]">
           <div className="relative w-fit">
-            <p className="text-7xl bg-gradient-to-r from-[#5e6795] to-[#aab6be] text-transparent bg-clip-text font-semibold">
+            <p className="xs:text-4xl md:text-6xl lg:text-7xl bg-gradient-to-r from-[#5e6795] to-[#aab6be] text-transparent bg-clip-text font-semibold">
               Private Markets
             </p>
-            <div className="p-6 size-52 -right-12 -top-24 absolute border border-white rounded-full" />
+            <div className="p-6 size-52 xs:-right-16 md:-right-12 xs:-top-32 md:-top-24 absolute border border-white rounded-full" />
           </div>
         </div>
-        <div className="flex flex-col gap-6 w-[50%] robotofont">
-          <p className="text-[#F2F2F2] text-4xl text-wrap">
+        <div className="flex flex-col gap-6 xs:w-full md:w-[50%] robotofont">
+          <p className="text-[#F2F2F2] xs:text-xl md:text-3xl  lg:text-4xl text-wrap">
             Pave your way to Alpha Gains and make the most of your investments.
           </p>
           <p className="text-[#F2F2F266] text-xl">Start your journey now.</p>
@@ -28,15 +28,22 @@ const Info = () => {
           </Button>
         </div>
       </div>
-      <div className="sm:h-fit lg:h-screen text-white flex gap-16 items-center justify-center my-4">
-        <div className="w-[50%] flex justify-end">
+      <div className="sm:h-fit lg:h-screen text-white flex md:flex-row xs:flex-col gap-16 items-center justify-center my-4">
+        <div className="md:hidden underline md:text-5xl xs:inline-flex gap-2 xs:text-xl">
+          <div className="">Access</div>
+          <div className="md:ml-8 italic">Alternative</div>
+          <div className="md:ml-16">Investments</div>
+        </div>
+        <div className="md:w-[50%] flex justify-end">
           <img src={chart} alt="chart" style={{ height: "400px" }} />
         </div>
-        <div className="text-xl w-[50%] playfairfont">
-          <div className="text-5xl">Access</div>
-          <div className="ml-8 text-5xl italic">Alternative</div>
-          <div className="ml-16 text-5xl">Investments</div>
-          <div className="text-md mt-12 w-[70%]">
+        <div className="text-xl md:w-[70%] lg:w-[50%] playfairfont">
+          <div className="md:block xs:hidden">
+            <div className="text-5xl">Access</div>
+            <div className="ml-8 text-5xl italic">Alternative</div>
+            <div className="ml-16 text-5xl">Investments</div>
+          </div>
+          <div className="text-md mt-12 xs:w-full md:w-[70%]">
             <p className="cormorantfont">
               Unleashing the untapped potential of the alternative markets
               through Rooba.Finance - Your gateway to superior returns and
@@ -54,7 +61,7 @@ const Info = () => {
         <div className="w-[80%] flex-col flex">
           <img src={blueicon} alt="icon" style={{ height: "350px" }} />
           <div className="scrolling">
-            <p className="text-4xl text-[#F2F2F2] mt-12">
+            <p className="xs:text-2xl sm:text-3xl md:text-4xl text-[#F2F2F2] mt-12">
               <span>
                 Empower your financing strategies with tomorrow’s revolutionary
                 technology. Our user-friendly platform will give your investors
@@ -62,10 +69,10 @@ const Info = () => {
                 liquidity of your fund by large margins.
               </span>
             </p>
-            <div className="text-[#F2F2F280] mt-10">
+            <div className="text-[#F2F2F280] xs:text-[8px] sm:text-xs md:text-sm lg:text-lg mt-10">
               <span className="inline-flex">
                 How would you want to start&nbsp;
-                <div className="underline">
+                <div className="underline inline-flex">
                   creating your financial instrument?
                 </div>
               </span>

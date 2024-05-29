@@ -55,14 +55,23 @@ const HowToInvest = () => {
                 id={question?.id}
                 btn={
                   question?.id === 1 && (
-                    <Button
-                      handleButton={() => {}}
-                      setHover={setHover}
-                      className="flex items-center gap-4 border border-black px-6 py-2 mt-2 hover:bg-[#121212] hover:text-white"
+                    <span
+                      tabIndex={0}
+                      onMouseEnter={() => {
+                        if (setHover) {
+                          setHover(true);
+                        }
+                      }}
+                      onMouseLeave={() => {
+                        if (setHover) {
+                          setHover(false);
+                        }
+                      }}
+                      className="flex items-center gap-4 border border-black px-6 w-fit py-2 mt-2 hover:bg-[#121212] hover:text-white"
                     >
                       Start Now
                       <Arrow hover={hover} />
-                    </Button>
+                    </span>
                   )
                 }
               />
