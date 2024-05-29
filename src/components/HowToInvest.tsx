@@ -3,10 +3,12 @@ import { HOWTOINVEST } from "../utils/constants.utils";
 import Accordion from "./Accordion";
 import arrow from "./../assets/arrow.svg";
 import Button from "./Button";
+import Arrow from "./Arrow";
 
 const HowToInvest = () => {
   const [guide, setGuide] = useState(HOWTOINVEST);
   const [activeIndex, setActiveIndex] = useState(1);
+  const [hover, setHover] = useState(false);
 
   const [direction, setDirection] = useState("left");
 
@@ -32,7 +34,7 @@ const HowToInvest = () => {
   };
 
   return (
-    <div className="h-screen w-[70%] howtoinvest">
+    <div className="lg:h-screen sm:w-full lg:w-[70%] howtoinvest">
       <div className="text-5xl playfairfont font-thin ml-10">
         <div>How to</div>
         <div className="items-center flex gap-4">
@@ -55,10 +57,11 @@ const HowToInvest = () => {
                   question?.id === 1 && (
                     <Button
                       handleButton={() => {}}
-                      className="flex items-center gap-4 border border-black px-7 py-2 mt-2"
+                      setHover={setHover}
+                      className="flex items-center gap-4 border border-black px-6 py-2 mt-2 hover:bg-[#121212] hover:text-white"
                     >
                       Start Now
-                      <img src={arrow} alt="arrow" />
+                      <Arrow hover={hover} />
                     </Button>
                   )
                 }

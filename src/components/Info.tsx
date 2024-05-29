@@ -28,7 +28,7 @@ const Info = () => {
           </Button>
         </div>
       </div>
-      <div className="h-screen text-white flex gap-16 items-center justify-center">
+      <div className="sm:h-fit lg:h-screen text-white flex gap-16 items-center justify-center my-4">
         <div className="w-[50%] flex justify-end">
           <img src={chart} alt="chart" style={{ height: "400px" }} />
         </div>
@@ -50,7 +50,7 @@ const Info = () => {
           </div>
         </div>
       </div>
-      <div className="justify-center flex items-center text-white h-screen aboutus">
+      <div className="justify-center flex items-center text-white lg:h-screen aboutus">
         <div className="w-[80%] flex-col flex">
           <img src={blueicon} alt="icon" style={{ height: "350px" }} />
           <div className="scrolling">

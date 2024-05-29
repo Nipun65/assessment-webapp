@@ -1,5 +1,6 @@
 import React from "react";
 import plus from "./../assets/plus.svg";
+import minus from "./../assets/minus.svg";
 import Button from "./Button";
 
 const Accordion = ({ show, question, description, handleShow, id, btn }) => {
@@ -9,7 +10,11 @@ const Accordion = ({ show, question, description, handleShow, id, btn }) => {
         <p className={`${show && "font-semibold"} text-lg text-[#121212]`}>
           {question}
         </p>
-        <img src={plus} alt="plus icon" className="size-5" />
+        {show ? (
+          <img src={minus} alt="minus icon" className="size-5" />
+        ) : (
+          <img src={plus} alt="plus icon" className="size-5" />
+        )}
       </div>
       <hr />
 
